@@ -24,9 +24,38 @@ def capitalize_first_letter():
     return capitalized_string
 
 #Task 3:  Palindrome
+def determine_palindrome():
+    user_string = input("\n\nPlease enter in a word that is palindrome(a word that is read the same forwards and backwards): ")
+    is_palindrome = False
+    positive_index = 0
+    negative_index = -1
+
+    while is_palindrome == False:
+        if user_string[positive_index] == user_string[negative_index] and positive_index < (len(user_string)/2):
+            if positive_index == int(len(user_string)/2):
+                is_palindrome = True
+            positive_index += 1
+            negative_index -= 1
+
+        else:
+            user_string = input("Please enter in a palindrome word: ")
+
+    return user_string
 
 #Task 4(bonus): Compress a string of characters
-capitalized_string = ""
 
-capitalized_string = capitalize_first_letter()
-print(capitalized_string)
+#Run all functions
+def run_functions():
+    #Task 1
+    #reverse_string
+
+    #Task 2
+    #capitalized_string = ""
+    #capitalized_string = capitalize_first_letter()
+    #print(capitalized_string)
+
+    #Task 3
+    palindrome_word = determine_palindrome()
+    print(f"Your palindrome word is {palindrome_word}")
+
+run_functions()
