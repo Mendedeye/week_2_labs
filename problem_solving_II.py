@@ -43,6 +43,29 @@ def determine_palindrome():
     return user_string
 
 #Task 4(bonus): Compress a string of characters
+def compress_string():
+    compressed_string = ""
+    next_index = 1
+    counter = 0
+    user_string = input("Put a bunch of repeating characters in here, have fun: ")
+
+    for current_index in range(len(user_string)):
+        if next_index == len(user_string):
+            counter += 1
+            compressed_string += str(counter)
+            compressed_string += user_string[current_index]
+            break
+        elif user_string[current_index] == user_string[next_index]:
+            counter += 1
+            next_index += 1
+        else:
+            counter += 1
+            compressed_string += str(counter)
+            compressed_string += user_string[current_index]
+            next_index += 1
+            counter = 0
+    
+    return compressed_string
 
 #Run all functions
 def run_functions():
@@ -55,7 +78,11 @@ def run_functions():
     #print(capitalized_string)
 
     #Task 3
-    palindrome_word = determine_palindrome()
-    print(f"Your palindrome word is {palindrome_word}")
+    #palindrome_word = determine_palindrome()
+    #print(f"Your palindrome word is {palindrome_word}")
+
+    #Task 4
+    compressed_string  = compress_string()
+    print(compressed_string)
 
 run_functions()
