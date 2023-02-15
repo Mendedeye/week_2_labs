@@ -4,7 +4,7 @@ def reverse_string():
     user_string = input("\n\nPlease enter in a string for me to reverse: ")
 
     for index in range(len(user_string) -1, -1, -1):
-        reverse_string += user_string[index]
+        reversed_string += user_string[index]
 
     return reverse_string
 
@@ -70,16 +70,16 @@ def compress_string():
 #Run all functions
 def run_functions():
     #Task 1
-    #reverse_string
+    reverse_string()
 
     #Task 2
-    #capitalized_string = ""
-    #capitalized_string = capitalize_first_letter()
-    #print(capitalized_string)
+    capitalized_string = ""
+    capitalized_string = capitalize_first_letter()
+    print(capitalized_string)
 
     #Task 3
-    #palindrome_word = determine_palindrome()
-    #print(f"Your palindrome word is {palindrome_word}")
+    palindrome_word = determine_palindrome()
+    print(f"Your palindrome word is {palindrome_word}")
 
     #Task 4
     compressed_string  = compress_string()
